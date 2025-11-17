@@ -47,12 +47,14 @@ authRouter.post('/signup', async (req, res) => {
     const token = createToken(user._id);
 
     // token cookie me bhejo
-    res.cookie('token', token, {
+    const cookieOptions = {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
       maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    };
+
+    res.cookie('token', token, cookieOptions);
 
     return res.status(201).json({
       message: 'signup success',
@@ -95,12 +97,14 @@ authRouter.post('/login', async (req, res) => {
     const token = createToken(user._id);
 
     // token cookie me bhejo
-    res.cookie('token', token, {
+    const cookieOptions = {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
       maxAge: 7 * 24 * 60 * 60 * 1000,
-    });
+    };
+
+    res.cookie('token', token, cookieOptions);
 
     // login success response
     return res.status(200).json({
