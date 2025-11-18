@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiLock, FiMail, FiUser } from 'react-icons/fi';
 import { toast } from 'react-toastify';
@@ -7,6 +8,7 @@ import Alert from '../components/Alert.jsx';
 import AuthShell from '../components/AuthShell.jsx';
 
 const RegisterPage = () => {
+  const navigate = useNavigate();
   const { signup, loading } = useAuth();
   const [form, setForm] = useState({
     email: '',
@@ -31,6 +33,7 @@ const RegisterPage = () => {
       const res = await signup(form);
       toast.success('Account ready! Redirecting to your feed.');
       setAlert({ type: 'success', message: res.message || 'Signup success!' });
+      navigate('/feed');
     } catch (error) {
       setAlert({ type: 'error', message: error.message });
       toast.error(error.message);
