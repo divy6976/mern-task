@@ -9,10 +9,10 @@ Premium social app built for the internship selection round. The project include
 
 ## 📸 Screenshots
 
-### Login and Feed Page
+### Signup Page
 ![Login Page](./frontend/public/login.png)
 
-### Signup Page
+### Login and Feed Page
 ![Signup Page](./frontend/public/signup.png)
 
 ## Features Checklist
