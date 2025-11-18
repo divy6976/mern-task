@@ -72,11 +72,4 @@ npm run dev
 - Framer Motion animations, React Toastify notifications
 - Day.js for date formatting, React Icons for consistent iconography
 
-## Demo Video Tips
-1. Signup → auto-login
-2. Logout + login again
-3. Forgot password workflow
-4. Post create/edit/delete
-5. Like + comment interactions
 
-Show browser DevTools network tab while hitting APIs to prove compliance. Good luck with the selection! 🚀
