@@ -2,6 +2,19 @@
 
 Premium social app built for the internship selection round. The project includes a full REST API layer (Express + MongoDB) and a Vite React frontend with glassmorphic UI, animations, and micro-interactions.
 
+## 🚀 Deployment
+
+- **Backend**: Hosted on [Render](https://render.com)
+- **Frontend**: Hosted on [Vercel](https://vercel.com)
+
+## 📸 Screenshots
+
+### Login and Feed Page
+![Login Page](./frontend/public/login.png)
+
+### Signup Page
+![Signup Page](./frontend/public/signup.png)
+
 ## Features Checklist
 
 ### APIs
